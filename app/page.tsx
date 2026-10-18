@@ -43,51 +43,47 @@ export default function Page() {
             </div>
           </div>
 
-          <nav className="mt-6">
-            <ul className="flex items-center justify-center gap-10">
-              <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
-                href=""
-              >
-                <FontAwesomeIcon
-                  className="text-black"
-                  icon={faGithub}
-                  size="2xl"
-                />
-              </Link>
+          <nav aria-label="Social media" className="mt-4 md:mt-6 lg:mt-10">
+            <ul className="flex items-center justify-center gap-5 md:gap-8 lg:gap-10">
+              <li>
+                <Link
+                  aria-label="GitHub"
+                  className="flex size-10 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:size-12 lg:size-14"
+                  href=""
+                >
+                  <FontAwesomeIcon className="text-2xl lg:text-3xl text-black" icon={faGithub} />
+                </Link>
+              </li>
 
-              <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
-                href=""
-              >
-                <FontAwesomeIcon
-                  className="text-black"
-                  icon={faInstagram}
-                  size="2xl"
-                />
-              </Link>
+              <li>
+                <Link
+                  aria-label="Instagram"
+                  className="flex size-10 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:size-12 lg:size-14"
+                  href=""
+                >
+                  <FontAwesomeIcon className="text-2xl lg:text-3xl text-black " icon={faInstagram} />
+                </Link>
+              </li>
 
-              <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
-                href=""
-              >
-                <FontAwesomeIcon
-                  className="text-black"
-                  icon={faLinkedin}
-                  size="2xl"
-                />
-              </Link>
+              <li>
+                <Link
+                  aria-label="LinkedIn"
+                  className="flex size-10 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:size-12 lg:size-14"
+                  href=""
+                >
+                  <FontAwesomeIcon className="text-2xl lg:text-3xl text-black " icon={faLinkedin} />
+                </Link>
+              </li>
 
-              <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
-                href=""
-              >
-                <FontAwesomeIcon
-                  className="text-black"
-                  icon={faEnvelope}
-                  size="2xl"
-                />
-              </Link>
+              <li>
+                <Link
+                  aria-label="Email"
+                  className="flex size-10 items-center justify-center rounded-full bg-white transition-transform hover:scale-110 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white md:size-12 lg:size-14"
+                  href=""
+                >
+                  <FontAwesomeIcon className="text-2xl lg:text-3xl text-black " icon={faEnvelope} />
+                </Link>
+              </li>
             </ul>
           </nav>
         </section>
