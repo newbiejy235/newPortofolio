@@ -93,35 +93,35 @@ export default function Page() {
         </section>
       </header>
 
-      <nav className="flex h-20 w-screen items-center justify-center gap-10 md:gap-20 bg-black">
+      <nav className="flex h-20 lg:h-28 w-screen items-center justify-center gap-10 md:gap-20 bg-[#1C1C1C]">
         <Link
           href={""}
-          className="group flex flex-col items-center justify-center gap-2 text-white"
+          className="navbar-link group flex lg:flex-col items-center justify-center gap-2 text-white"
         >
           <Home />
-          <h1 className="border-b text-sm font-bold opacity-0 group-hover:opacity-100 hover:cursor-pointer">
+          <span className="navbar-link-label font-jakarta border-b text-sm font-bold">
             Home
-          </h1>
+          </span>
         </Link>
 
         <Link
           href={""}
-          className="group flex flex-col items-center justify-center gap-2 text-white"
+          className="navbar-link group flex lg:flex-col items-center justify-center gap-2 text-white"
         >
           <FolderOpen/>
-          <h1 className="border-b text-sm font-bold opacity-0 group-hover:opacity-100 hover:cursor-pointer">
+          <span className="navbar-link-label font-jakarta border-b text-sm font-bold">
             Project
-          </h1>
+          </span>
         </Link>
 
         <Link
           href={""}
-          className="group flex flex-col items-center justify-center gap-2 text-white"
+          className="navbar-link group flex lg:flex-col items-center justify-center gap-2 text-white"
         >
           <Image/>
-          <h1 className="border-b text-sm font-bold opacity-0 group-hover:opacity-100 hover:cursor-pointer">
-            Galerry
-          </h1>
+          <span className="navbar-link-label font-jakarta border-b text-sm font-bold">
+            Gallery
+          </span>
         </Link>
       </nav>
     </main>
