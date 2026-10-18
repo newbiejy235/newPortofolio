@@ -8,7 +8,8 @@ import { faGithub, faInstagram, faLinkedin, faMailchimp } from "@fortawesome/fre
 
 export default function Page() {
   return (
-    <main className="grid min-h-screen place-items-center bg-[#fdfcf7] px-[7.5vw]">
+    <div>
+    <main className=" grid min-h-screen place-items-center bg-[#fdfcf7] px-[7.5vw]">
       <header className="relative aspect-[16/9] w-full max-w-[1200px]">
         <ShapeGrid
           shape="square"
@@ -28,42 +29,42 @@ export default function Page() {
 
         <section className="pointer-events-none absolute inset-0 z-10 flex flex-col items-center justify-center text-white">
           {/* Hero */}
-          <div className="flex h-[50%] w-[65%] items-center justify-center bg-black text-4xl font-semibold">
+          <div className="flex  h-[50%] w-[65%] items-center justify-center bg-black text-4xl font-semibold">
             <div className="flex flex-col items-center justify-center space-y-2">
-              <div className="flex items-center justify-center gap-4">
-                <span className="block w-20 shrink-0 border-b-4 border-white" />
-                <h1 className="leading-none whitespace-nowrap">PORTOFOLIO</h1>
-                <span className="block w-20 shrink-0 border-b-4 border-white" />
+              <div className="flex items-center justify-center gap-2 md:gap-4">
+                <span className="block w-10 lg:w-20 shrink-0 border-b-4 border-white" />
+                <h1 className="leading-none whitespace-nowrap text-2xl md:text-4xl lg:text-5xl">PORTOFOLIO</h1>
+                <span className="block w-10 lg:w-20 shrink-0 border-b-4 border-white" />
               </div>
               <p className="text-[10px]">ADIF HALIM ALAMSYAH</p>
             </div>
           </div>
 
           <nav className="mt-6">
-            <ul className="flex items-center justify-center gap-10">
+            <ul className="flex items-center justify-center gap-5 lg:gap-10 md:gap-8">
               <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
+                className="flex size-8 md:size-10 lg:size-12 items-center justify-center rounded-full bg-white"
                 href=""
               >
                 <FontAwesomeIcon className="text-black" icon={faGithub} size="2xl" />
               </Link>
 
               <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
+                className="flex size-8  md:size-10 lg:size-12  items-center justify-center rounded-full bg-white"
                 href=""
               >
                 <FontAwesomeIcon className="text-black" icon={faInstagram} size="2xl" />
               </Link>
 
               <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
+                className="flex size-8 md:size-10 lg:size-12 items-center justify-center rounded-full bg-white"
                 href=""
               >
                 <FontAwesomeIcon className="text-black" icon={faLinkedin} size="2xl" />
               </Link>
 
                <Link
-                className="flex size-12 items-center justify-center rounded-full bg-white"
+                className="flex size-8 md:size-10 lg:size-12 items-center justify-center rounded-full bg-white"
                 href=""
               >
                 <FontAwesomeIcon className="text-black" icon={faEnvelope} size="2xl" />
@@ -72,6 +73,8 @@ export default function Page() {
           </nav>
         </section>
       </header>
+
     </main>
+    </div>
   )
 }
