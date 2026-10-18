@@ -177,7 +177,7 @@ export default function Page() {
               </h2>
               <p className="pl-5 text-[11px] leading-relaxed text-[#555]">
                 Halo, saya adif halim alamsyah.
-               <br />
+                <br />
                 Saya seorang web dev
               </p>
             </article>
