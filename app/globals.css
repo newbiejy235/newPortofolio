@@ -131,3 +131,43 @@
     @apply font-sans;
     }
 }
+
+@media (min-width: 769px) {
+  .navbar-link {
+    position: relative;
+  }
+
+  .navbar-link-label {
+    position: absolute;
+    top: calc(100% + 0.25rem);
+    left: 50%;
+    border-bottom: 0;
+    opacity: 0;
+    transform: translate(calc(-50% - 0.5rem), 0);
+    transition:
+      opacity 200ms ease,
+      transform 200ms ease;
+  }
+
+  .navbar-link-label::after {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    height: 1px;
+    background-color: currentColor;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 200ms ease;
+  }
+
+  .navbar-link:is(:hover, :focus-visible) .navbar-link-label {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  .navbar-link:is(:hover, :focus-visible) .navbar-link-label::after {
+    transform: scaleX(1);
+  }
+}
