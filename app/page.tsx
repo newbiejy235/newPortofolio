@@ -14,6 +14,8 @@ import {
   Send,
 } from "lucide-react"
 
+import GithubActivity from "@/components/GithubActivity"
+
 export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-10 overflow-x-hidden  px-[7.5vw] py-10">
@@ -129,7 +131,7 @@ export default function Page() {
 
       <section
         aria-label="Portfolio preview"
-        className="grid w-full max-w-[760px] grid-cols-1 items-start justify-center gap-6 sm:grid-cols-2 lg:gap-8"
+        className="mt-28 mb-28 grid w-full max-w-[760px] grid-cols-1 items-start justify-center gap-6 sm:grid-cols-2 lg:gap-8"
       >
         <article className="mx-auto w-full max-w-[360px] border border-[#dedede] bg-[#f5f5f5] p-3 text-[#181818] shadow-sm">
           <header className="mb-3 flex items-center justify-between gap-2">
@@ -210,6 +212,7 @@ export default function Page() {
           </div>
         </aside>
       </section>
+      <GithubActivity/>
     </main>
   )
 }
