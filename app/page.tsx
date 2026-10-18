@@ -176,10 +176,8 @@ export default function Page() {
                 @Profile
               </h2>
               <p className="pl-5 text-[11px] leading-relaxed text-[#555]">
-                Halo, saya adif halim
-                <br />
-                alamsyah.
-                <br />
+                Halo, saya adif halim alamsyah.
+               <br />
                 Saya seorang web dev
               </p>
             </article>
