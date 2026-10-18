@@ -1,14 +1,18 @@
 import ShapeGrid from "@/components/ShapeGrid"
 import Link from "next/link"
-import Image from "next/image"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faUser, faEnvelope, } from "@fortawesome/free-solid-svg-icons";
-import { faGithub, faInstagram, faLinkedin, faMailchimp } from "@fortawesome/free-brands-svg-icons";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHouse, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import {
+  faGithub,
+  faInstagram,
+  faLinkedin,
+  faMailchimp,
+} from "@fortawesome/free-brands-svg-icons"
+import { Home, FolderOpen, Image } from "lucide-react"
 
 export default function Page() {
   return (
-    <main className="grid min-h-screen place-items-center bg-[#fdfcf7] px-[7.5vw]">
+    <main className="flex min-h-screen flex-col items-center justify-center gap-10 overflow-x-hidden bg-[#fdfcf7] px-[7.5vw] py-10">
       <header className="relative aspect-[16/9] w-full max-w-[1200px]">
         <ShapeGrid
           shape="square"
@@ -45,33 +49,81 @@ export default function Page() {
                 className="flex size-12 items-center justify-center rounded-full bg-white"
                 href=""
               >
-                <FontAwesomeIcon className="text-black" icon={faGithub} size="2xl" />
+                <FontAwesomeIcon
+                  className="text-black"
+                  icon={faGithub}
+                  size="2xl"
+                />
               </Link>
 
               <Link
                 className="flex size-12 items-center justify-center rounded-full bg-white"
                 href=""
               >
-                <FontAwesomeIcon className="text-black" icon={faInstagram} size="2xl" />
+                <FontAwesomeIcon
+                  className="text-black"
+                  icon={faInstagram}
+                  size="2xl"
+                />
               </Link>
 
               <Link
                 className="flex size-12 items-center justify-center rounded-full bg-white"
                 href=""
               >
-                <FontAwesomeIcon className="text-black" icon={faLinkedin} size="2xl" />
+                <FontAwesomeIcon
+                  className="text-black"
+                  icon={faLinkedin}
+                  size="2xl"
+                />
               </Link>
 
-               <Link
+              <Link
                 className="flex size-12 items-center justify-center rounded-full bg-white"
                 href=""
               >
-                <FontAwesomeIcon className="text-black" icon={faEnvelope} size="2xl" />
+                <FontAwesomeIcon
+                  className="text-black"
+                  icon={faEnvelope}
+                  size="2xl"
+                />
               </Link>
             </ul>
           </nav>
         </section>
       </header>
+
+      <nav className="flex h-20 lg:h-28 w-screen items-center justify-center gap-10 md:gap-20 bg-[#1C1C1C]">
+        <Link
+          href={""}
+          className="navbar-link group flex lg:flex-col items-center justify-center gap-2 text-white"
+        >
+          <Home />
+          <span className="navbar-link-label font-jakarta border-b text-sm font-bold">
+            Home
+          </span>
+        </Link>
+
+        <Link
+          href={""}
+          className="navbar-link group flex lg:flex-col items-center justify-center gap-2 text-white"
+        >
+          <FolderOpen/>
+          <span className="navbar-link-label font-jakarta border-b text-sm font-bold">
+            Project
+          </span>
+        </Link>
+
+        <Link
+          href={""}
+          className="navbar-link group flex lg:flex-col items-center justify-center gap-2 text-white"
+        >
+          <Image/>
+          <span className="navbar-link-label font-jakarta border-b text-sm font-bold">
+            Gallery
+          </span>
+        </Link>
+      </nav>
     </main>
   )
 }
