@@ -20,11 +20,11 @@ type GitHubData = {
 }
 
 const levelColors: Record<string, string> = {
-  NONE: "#161b22",
-  FIRST_QUARTILE: "#0e4429",
-  SECOND_QUARTILE: "#006d32",
-  THIRD_QUARTILE: "#26a641",
-  FOURTH_QUARTILE: "#39d353",
+  NONE: "var(--contribution-none)",
+  FIRST_QUARTILE: "var(--contribution-first)",
+  SECOND_QUARTILE: "var(--contribution-second)",
+  THIRD_QUARTILE: "var(--contribution-third)",
+  FOURTH_QUARTILE: "var(--contribution-fourth)",
 }
 
 const weekdayLabels: Record<number, string> = {
@@ -58,7 +58,7 @@ export default function GithubActivity() {
 
   if (error) {
     return (
-      <p className="w-[calc(100vw-40px)] rounded-md border border-[#30363d] bg-[#0d1117] p-5 text-sm text-[#8b949e] sm:p-7">
+      <p className="w-full max-w-[720px] rounded-md border border-border bg-[var(--content-background)] p-5 text-sm text-muted-foreground sm:p-7">
         Data kontribusi GitHub gagal dimuat.
       </p>
     )
@@ -66,16 +66,16 @@ export default function GithubActivity() {
 
   if (!data) {
     return (
-      <p className="w-[calc(100vw-40px)] rounded-md border border-[#30363d] bg-[#0d1117] p-5 text-sm text-[#8b949e] sm:p-7">
+      <p className="w-full max-w-[720px] rounded-md border border-border bg-[var(--content-background)] p-5 text-sm text-muted-foreground sm:p-7">
         Memuat aktivitas GitHub...
       </p>
     )
   }
 
   return (
-    <section className="w-[calc(100vw-40px)] rounded-md border border-[#30363d] bg-[#0d1117] p-4 text-[#c9d1d9] sm:p-6">
+    <section className="w-full max-w-[720px] rounded-md border border-border bg-[var(--content-background)] p-4 text-foreground sm:p-6">
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <p className="text-sm font-semibold text-white">
+        <p className="text-sm font-semibold text-foreground">
           {data.totalContributions.toLocaleString("en-US")} contributions in the
           last year
         </p>
@@ -83,7 +83,7 @@ export default function GithubActivity() {
           href={`https://github.com/${data.username}`}
           target="_blank"
           rel="noreferrer"
-          className="text-xs text-[#8b949e] transition-colors hover:text-[#c9d1d9]"
+          className="text-xs text-muted-foreground transition-colors hover:text-foreground"
         >
           @{data.username} ↗
         </a>
@@ -112,7 +112,7 @@ export default function GithubActivity() {
                     className="relative h-4 w-[11px] shrink-0"
                   >
                     {monthLabel && (
-                      <span className="absolute left-0 text-[10px] whitespace-nowrap text-[#8b949e]">
+                      <span className="absolute left-0 text-[10px] whitespace-nowrap text-muted-foreground">
                         {monthLabel}
                       </span>
                     )}
@@ -123,7 +123,7 @@ export default function GithubActivity() {
           </div>
 
           <div className="flex">
-            <div className="mr-2 flex w-6 shrink-0 flex-col gap-[3px] text-[9px] text-[#8b949e]">
+            <div className="mr-2 flex w-6 shrink-0 flex-col gap-[3px] text-[9px] text-muted-foreground">
               {Array.from({ length: 7 }, (_, weekday) => (
                 <span key={weekday} className="flex h-[11px] items-center">
                   {weekdayLabels[weekday] ?? ""}
@@ -162,7 +162,7 @@ export default function GithubActivity() {
                         key={day.date}
                         title={`${day.contributionCount} contributions on ${day.date}`}
                         aria-label={`${day.contributionCount} contributions on ${day.date}`}
-                        className="size-[11px] rounded-[2px] outline outline-1 outline-[#ffffff08] transition-colors hover:outline-[#8b949e]"
+                        className="size-[11px] rounded-[2px] outline outline-1 outline-border transition-colors hover:outline-foreground"
                         role="gridcell"
                         style={{
                           backgroundColor:
@@ -179,12 +179,12 @@ export default function GithubActivity() {
         </div>
       </div>
 
-      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-[10px] text-[#8b949e]">
+      <div className="mt-3 flex flex-wrap items-center justify-between gap-3 text-[10px] text-muted-foreground">
         <a
           href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-graph-settings/viewing-contributions-on-your-profile"
           target="_blank"
           rel="noreferrer"
-          className="transition-colors hover:text-[#c9d1d9]"
+          className="transition-colors hover:text-foreground"
         >
           Learn how we count contributions
         </a>

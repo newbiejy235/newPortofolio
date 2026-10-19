@@ -458,6 +458,12 @@ export default function ShapeGrid({
     const draw = () => {
       const s = settingsRef.current;
       const { view, ratio } = state;
+      const lineColor =
+        s.lineColor === 'currentColor'
+          ? document.documentElement.classList.contains('dark')
+            ? '#ffffff'
+            : '#000000'
+          : s.lineColor;
       const layout = layoutFor(s.shape, s.cellSize);
       ctx.setTransform(1, 0, 0, 1, 0, 0);
       ctx.globalCompositeOperation = 'source-over';
@@ -482,8 +488,8 @@ export default function ShapeGrid({
       ctx.lineWidth = s.lineWidth;
       ctx.lineJoin = 'round';
       ctx.lineCap = 'round';
-      ctx.strokeStyle = s.lineColor;
-      ctx.fillStyle = s.lineColor;
+      ctx.strokeStyle = lineColor;
+      ctx.fillStyle = lineColor;
       ctx.beginPath();
       if (s.shape === 'square') {
         for (let i = i0; i <= i1; i++) {
